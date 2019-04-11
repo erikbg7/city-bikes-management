@@ -1,0 +1,7 @@
+{
+  "name": "air-pollution-tutorial",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

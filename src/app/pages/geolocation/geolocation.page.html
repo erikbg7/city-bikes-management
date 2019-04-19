@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Geolocation
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+  <ion-label *ngIf="latitud" color="primary">Latitud:</ion-label>
+  <ion-label *ngIf="latitud" color="primary">{{latitud}}</ion-label>
+  </ion-item>
+  <ion-item>
+  <ion-label *ngIf="longitud"color="primary">Longitud:</ion-label>
+  <ion-label *ngIf="longitud"color="primary">{{longitud}}</ion-label>
+  </ion-item>
+  <ion-item>
+  <ion-label *ngIf="altitud"color="primary">Altitud:</ion-label>
+  <ion-label *ngIf="altitud"color="primary">{{altitud}}m</ion-label>
+  </ion-item>
+</ion-content>

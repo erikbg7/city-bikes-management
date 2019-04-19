@@ -1,0 +1,7 @@
+{
+  "name": "Seminar4-Ionic",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

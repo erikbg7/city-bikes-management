@@ -16,4 +16,8 @@ export class DataService {
     return this.http.get('https://api.waqi.info/feed/barcelona/?token=9da5f1c00d33a9a028ccde26fda95d05c7b46e3e', )
   }
 
+  getAqiStation(station){
+    return this.http.get('https://api.waqi.info/feed/'+station+'/?token=9da5f1c00d33a9a028ccde26fda95d05c7b46e3e', )
+  }
+
 }

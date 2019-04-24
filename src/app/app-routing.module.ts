@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import {FormComponent} from './pages/form/form.component';
+import {ContaminationComponent} from './pages/contamination/contamination.component';
 
 const routes: Routes = [
   {
@@ -18,6 +20,10 @@ const routes: Routes = [
     loadChildren: './pages/gallery/gallery.module#GalleryPageModule' },
   { path: 'location',
     loadChildren: './pages/geolocation/geolocation.module#GeolocationPageModule' },
+  { path: 'form',
+    component: FormComponent },
+  { path: 'contamination',
+    component: ContaminationComponent },
 ];
 
 @NgModule({

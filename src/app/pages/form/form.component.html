@@ -9,10 +9,10 @@
 
 <ion-content>
   <div class="limiter">
-    <div class="container-login100">
-      <div class="wrap-login100 p-l-15 p-r-15 p-t-15 p-b-15">
+    <div class="stations-container">
+      <div class="stations-wrap p-l-15 p-r-15 p-t-15 p-b-15">
         <form class="login100-form validate-form">
-          <span class="login100-form-title p-b-49">
+          <span class="stations-title p-b-49">
             Obtener Contaminación de una Ciudad
           </span>
           <form [formGroup]="cityForm">
@@ -24,7 +24,7 @@
               </ion-item>
             </ion-list>
           </form>
-          <div class="container-login100-form-btn">
+          <div class="stations-container-btn">
             <div class="wrap-login100-form-btn">
               <div class="login100-form-bgbtn"></div>
               <ion-button color="primary" (click)="obtenerInfo()" [disabled]="cityForm.invalid" expand="block">Obtener Contaminación</ion-button>

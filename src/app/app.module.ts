@@ -17,12 +17,16 @@ import { Geolocation } from '@ionic-native/geolocation/ngx';
 import {FormComponent} from './pages/form/form.component';
 import {ContaminationComponent} from './pages/contamination/contamination.component';
 import {CityService} from './services/city.service';
+import {StationsComponent} from './pages/stations/stations.component';
+import {BikesComponent} from './pages/bikes/bikes.component';
 
 @NgModule({
   declarations: [
       AppComponent,
       FormComponent,
       ContaminationComponent,
+      StationsComponent,
+      BikesComponent
   ],
   entryComponents: [],
   imports: [

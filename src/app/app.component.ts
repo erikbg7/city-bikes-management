@@ -35,6 +35,16 @@ export class AppComponent {
       url: '/location',
       icon: 'pin'
     },
+    {
+      title: 'Stations',
+      url: '/stations',
+      icon: 'pin'
+    },
+      {
+          title: 'Bikes',
+          url: '/bikes',
+          icon: 'bicycle'
+      }
   ];
 
   constructor(

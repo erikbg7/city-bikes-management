@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Bikes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bikes-container">
+  <span class="bikes-title p-b-20"> Assigned Bikes </span>
+  <ion-list *ngIf="bikes">
+    <ion-item button *ngFor="let bike of assignedBikes">
+      <ion-icon slot="start" name="bicycle"></ion-icon>
+      <ion-label text-wrap>
+        <h3>{{bike.name}}</h3>
+        {{bike.kms}}kms - {{bike.station}}
+      </ion-label>
+      <ion-button color="danger" slot="end"  class="station-button" (click)="obtenerInfo()">Delete</ion-button>
+    </ion-item>
+  </ion-list>
+
+  <br>
+
+  <span class="bikes-title p-b-20"> Unassigned Bikes </span>
+  <ion-list *ngIf="bikes">
+    <ion-item button *ngFor="let bike of unassignedBikes, let i = index">
+      <ion-icon slot="start" name="bicycle"></ion-icon>
+      <ion-label text-wrap>
+        <h3>{{bike.name}}</h3>
+        {{bike.kms}}kms - {{bike.station}}
+      </ion-label>
+        <ion-button color="success" slot="end"  class="bikes-button-assign" shape="round" (click)="assignBike(bike._id, i, 'Plaça Catalunya')">
+          <ion-icon name="add-circle"></ion-icon>
+        </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>
+

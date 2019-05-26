@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Stations</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="limiter">
+    <div class="stations-container">
+      <div class="stations-wrap p-l-15 p-r-15 p-t-15 p-b-15">
+          <span class="stations-title p-b-20">
+            Select a station
+          </span>
+          <div class="stations-container-btn" *ngFor = "let station of stations; let i=index">
+              <ion-button class="station-button" (click)="obtenerInfo()">{{station.name}}</ion-button>
+          </div>
+        <pre></pre>
+      </div>
+    </div>
+  </div>
+</ion-content>

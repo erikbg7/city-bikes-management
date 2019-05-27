@@ -2,21 +2,22 @@
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
+      <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Bikes</ion-title>
+    <ion-title>Bikes in {{station.name}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="bikes-container">
   <span class="bikes-title p-b-20"> Assigned Bikes </span>
   <ion-list *ngIf="bikes">
-    <ion-item button *ngFor="let bike of assignedBikes">
+    <ion-item button *ngFor="let bike of stationBikes, let i = index">
       <ion-icon slot="start" name="bicycle"></ion-icon>
       <ion-label text-wrap>
         <h3>{{bike.name}}</h3>
         {{bike.kms}}kms - {{bike.station}}
       </ion-label>
-      <ion-button color="danger" slot="end"  class="station-button" (click)="obtenerInfo()">Delete</ion-button>
+      <ion-button color="danger" slot="end"  class="station-button" (click)="unassignBike(bike._id, i)">Unassign</ion-button>
     </ion-item>
   </ion-list>
 
@@ -30,7 +31,11 @@
         <h3>{{bike.name}}</h3>
         {{bike.kms}}kms - {{bike.station}}
       </ion-label>
+      <ion-button color="success" slot="end"  class="bikes-button-assign" shape="round" (click)="assignBike(bike._id, i, station.name)">
+        <ion-icon name="add-circle"></ion-icon>
+      </ion-button>
     </ion-item>
   </ion-list>
 </ion-content>
+
 

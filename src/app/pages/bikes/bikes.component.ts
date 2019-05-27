@@ -40,20 +40,6 @@ export class BikesComponent implements OnInit {
         console.log(this.bikes);
     }
 
-    confirmDelete(id: string, i: number) {
-        if (confirm('This bike will be deleted from your bike list...')) {
-            this.bikesService.deleteBike(id)
-                .subscribe(
-                    res => {
-                        console.log(res);
-                        console.log('Se ha borrado correctamente ', i);
-                        this.bikes.splice(i, 1);
-                        console.log('Se ha borrado correctamente ', this.bikes);
-
-                    });
-        }
-    }
-
     assignBike(id: string, i: number, station: string) {
         this.assignation = this.unassignedBikes[i];
         this.assignation.station = station;

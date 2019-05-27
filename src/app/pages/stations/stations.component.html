@@ -15,7 +15,7 @@
             Select a station
           </span>
           <div class="stations-container-btn" *ngFor = "let station of stations; let i=index">
-              <ion-button class="station-button" (click)="obtenerInfo()">{{station.name}}</ion-button>
+              <ion-button class="station-button" [routerLink]="['/station-bikes', station._id]">{{station.name}}</ion-button>
           </div>
         <pre></pre>
       </div>

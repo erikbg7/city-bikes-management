@@ -19,6 +19,7 @@ import {ContaminationComponent} from './pages/contamination/contamination.compon
 import {CityService} from './services/city.service';
 import {StationsComponent} from './pages/stations/stations.component';
 import {BikesComponent} from './pages/bikes/bikes.component';
+import {StationsDetailComponent} from './pages/stations-detail/stations-detail.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {BikesComponent} from './pages/bikes/bikes.component';
       FormComponent,
       ContaminationComponent,
       StationsComponent,
-      BikesComponent
+      BikesComponent,
+      StationsDetailComponent
   ],
   entryComponents: [],
   imports: [

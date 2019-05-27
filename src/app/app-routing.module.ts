@@ -4,6 +4,7 @@ import {FormComponent} from './pages/form/form.component';
 import {ContaminationComponent} from './pages/contamination/contamination.component';
 import {StationsComponent} from './pages/stations/stations.component';
 import {BikesComponent} from './pages/bikes/bikes.component';
+import {StationsDetailComponent} from './pages/stations-detail/stations-detail.component';
 
 const routes: Routes = [
   {
@@ -29,7 +30,9 @@ const routes: Routes = [
   { path: 'stations',
     component: StationsComponent },
   { path: 'bikes',
-    component: BikesComponent }
+    component: BikesComponent },
+    { path: 'station-bikes/:id',
+        component: StationsDetailComponent }
 ];
 
 @NgModule({

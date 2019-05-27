@@ -16,26 +16,6 @@ export class AppComponent {
       icon: 'stats'
     },
     {
-      title: 'City Form',
-      url: '/form',
-      icon: 'add'
-    },
-    {
-      title: 'User List',
-      url: '/list',
-      icon: 'people'
-    },
-    {
-      title: 'Gallery',
-      url: '/gallery',
-      icon: 'camera'
-    },
-    {
-      title: 'Location',
-      url: '/location',
-      icon: 'pin'
-    },
-    {
       title: 'Stations',
       url: '/stations',
       icon: 'pin'
